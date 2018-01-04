@@ -14,6 +14,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "docker:build": "next build && docker build -t garciadiazjaime/website-events .",
+    "docker:run": "docker run -d -p 49300:3000 -e 'API_URL=http://0.0.0.0:3030/' --name events garciadiazjaime/website-events",
+    "docker:push": "docker push garciadiazjaime/website-events",
+    "docker:pull": "docker pull garciadiazjaime/website-events"
   }
 }
