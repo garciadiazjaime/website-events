@@ -12,7 +12,10 @@ export default ({ event }) => (
     >
       <img src={event.image} alt={event.title} />
     </CardMedia>
-    <CardTitle subtitle={event.description} />
+    <CardTitle title={event.rawDate} subtitle={event.price} />
+    <CardText>
+      {event.description}
+    </CardText>
     <CardActions>
       <FlatButton label="Leer más" onClick={() => openGrpnPage(event.url)} />
     </CardActions>
