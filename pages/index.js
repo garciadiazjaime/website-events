@@ -6,11 +6,12 @@ import 'isomorphic-unfetch'
 import Layout from '../components/layout'
 import Event from '../components/event'
 
+const apiURL = process.env.API_URL
 
 export default class extends React.Component {
 
-  static async getInitialProps({ req }) {
-    const res = await fetch('http://0.0.0.0:3030/events?query={event(uuid:%22%22){title,image,description,url,uuid,price,date}}')
+  static async getInitialProps() {
+    const res = await fetch(`${apiURL}/events?query={event(uuid:%22%22){title,image,description,url,uuid,price,date,rawDate}}`)
     const events = await res.json()
     return { events }
   }
