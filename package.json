@@ -16,6 +16,7 @@
     "build": "next build",
     "start": "next start",
     "export": "yarn build && next export",
+    "test": "echo 'pending'",
     "docker:build": "next build && docker build -t garciadiazjaime/website-events .",
     "docker:push": "docker push garciadiazjaime/website-events",
     "docker:pull": "docker pull garciadiazjaime/website-events"
