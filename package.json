@@ -13,12 +13,12 @@
   },
   "scripts": {
     "dev": "API_URL=http://0.0.0.0:3030 next",
-    "build": "next build",
+    "build": "API_URL=http://0.0.0.0:3030 next build",
     "start": "next start",
-    "export": "yarn build && next export",
+    "export": "npm run build && API_URL=http://0.0.0.0:3030 next export",
     "test": "echo 'pending'",
-    "docker:build": "next build && docker build -t garciadiazjaime/website-events .",
-    "docker:push": "docker push garciadiazjaime/website-events",
-    "docker:pull": "docker pull garciadiazjaime/website-events"
+    "google:clean": "gsutil -m rm -r gs://www.eventostijuana.org/_next",
+    "google:upload": "gsutil -m cp -r ./out/. gs://www.eventostijuana.org",
+    "deploy": "npm run google:clean && npm run google:upload"
   }
 }

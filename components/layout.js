@@ -5,11 +5,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Mainmenu from './mainMenu';
 import Footer from './footer';
 
-export default ({ children, title = 'Chicago Events' }) => (
+export default ({ children }) => (
   <MuiThemeProvider>
     <div>
       <Head>
-        <title>{ title }</title>
+        <title>Eventos Tijuana | Qué hacer en Tijuana</title>
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>

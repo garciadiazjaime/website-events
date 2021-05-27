@@ -5,10 +5,10 @@
 ## Run project:
 a) Install Dependencies
 
-`yarn`
+`npm i`
 
 b) Start Server
 
-`yarn dev`
+`npm run dev`
 
 By default server will run on http://localhost:3000
